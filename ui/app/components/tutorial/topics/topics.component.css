@@ -1,0 +1,41 @@
+.student-main-container{
+    background-color: white;
+    width: 20%;
+    margin: 0% 7%;
+    box-sizing: border-box;
+}
+.student-profile{
+    box-sizing: border-box;
+}
+.student-profile div:first-child{
+    border: 2px solid gainsboro;
+    padding: 0%;
+}
+.student-main{
+    
+    background-repeat: repeat;
+    background-color: #00304C;
+}
+.student-profile-image{
+    width: 120px; 
+    margin: 30px 90px;
+}
+.student-left-nav{
+    padding: 0%;
+}
+.student-profile h1{
+    margin: 20px 90px 40px;
+}
+.student-left-nav-list{
+    list-style: none;
+    padding: 0px;
+}
+.student-left-nav-list li{
+    border: 2px solid gainsboro;
+    padding: 1rem 1.7rem;
+}
+.student-left-nav-list li a{
+   text-decoration: none;
+   color: rgb(202, 199, 199);
+   font-size: 18px;
+}

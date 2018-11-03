@@ -1,0 +1,64 @@
+.nav-start-elements{
+    margin-left: 70px;
+    }
+    .header-navbar{
+        background-color: #00304C;
+    }
+    nav-link{
+     color: white;
+     font-size: 16px;
+    }
+    .nav-start-elements li{
+        margin: 0px 13px;
+    }
+    .cart-icon{
+        margin-top: 7px;
+        margin-left: 150px;
+    }
+  
+    .nav-signUp{
+        width: 80px;
+        height: 35px;
+        margin-top: 7px;
+        border: 1px solid #0ba9a0;
+        border-radius: 4px;
+        background-color: #0ba9a0;
+        color: white;
+        position: relative;
+        margin-left: 600px;
+    }
+    .nav-signIn{
+        margin: 10px 0px 0px 10px;
+    }
+    .nav-header-elements a{
+        text-decoration: none;
+        color: white;
+        font-size: 18px;
+    }
+    .header-below-nav{
+        margin-top: 75px;
+    }
+    .img-logo{
+        width: 70px;
+        margin-left: 80px;
+    }
+    .logo-head{
+        float: right;
+    }
+    .right-nav{
+        list-style: none;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .right-nav li a{
+        text-decoration: none;
+        color: rgb(149, 146, 146);
+        font-size: 20px;
+    }
+    /* .under-construction{
+        height: 300px;
+       
+    } */
+    
+
+    

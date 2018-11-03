@@ -1,0 +1,36 @@
+
+    <div *ngIf="vid" class="vid col-lg-12 col-md-12 col-sm-12 col-xs-12 p-0 m-0">
+        <youtube-player   width="100%"
+        height="400px" [videoId]="videoid" (ready)="savePlayer($event)" (change)="onStateChange($event)" height="100%"
+            width="100%">
+        </youtube-player>
+    </div>
+    <div *ngIf="!vid" class="vid col-lg-12 col-md-12 col-sm-12 col-xs-12 p-0 m-0">
+        <youtube-player   width="100%"
+        height="400px" [videoId]="videoid" (ready)="savePlayer($event)" (change)="onStateChange($event)" height="100%"
+            width="100%">
+        </youtube-player>
+    </div>
+    <div *ngFor="let course of courses" class="col-lg-10 col-md-10 col-sm-10 col-xs-10 p-0 m-0" >
+        <div *ngFor="let topics of 
+        course.topics; let i = index">
+            <div *ngIf="topics.name === topic">
+                <h1>{{topics.name}}:</h1>
+    <p>{{course.description}}</p>
+
+                <button class="btn btn-primary" href="http://www.github.com">download link</button>
+            </div>
+        </div>
+    </div> 
+
+
+
+
+<!-- <youtube-player
+[videoId]="id"
+(ready)="savePlayer($event)"
+(change)="onStateChange($event)"
+></youtube-player>
+<div>
+    topic id::{{id}}
+</div> -->

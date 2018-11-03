@@ -1,0 +1,57 @@
+
+<div class="col-12 student-left-nav">
+    <ul  *ngFor="let course of courses" class="col-12 student-left-nav-list" >
+        <div *ngIf="courseName === course.name">  
+            <li *ngFor="let topic of course.topics" >
+            <span><i class="fa fa-pencil-square-o"></i></span>
+            <a class="nav-link active" [routerLink]="['/course', courseName, topic.videoId]" 
+            [queryParams]="{watch: topic.videoId, editor: topic.editor.code}"
+            fragment=true>
+                <span data-feather="home"></span>
+                {{topic.name}} <span class="sr-only">(current)</span>
+            </a>
+        </li>
+      </div>
+    </ul>
+</div>
+<!-- <ul class="student-left-nav-list">
+    <li>
+      <span><i class="fa fa-pencil-square-o"></i></span>
+      <a class="" href="">Update Profile</a>
+    </li>
+    <li>
+      <span class=""><i class="fa fa-picture-o" aria-hidden="true"></i>
+      <a class="" href="">View Profile</a></span></li>
+  <li>
+    <span class=""><i class="fa fa-book"></i></span>
+    <a class="" href="">Perchasedcourses</a>
+  </li>
+  <li>
+    <span class=""><i class="fa fa-book"></i></span>
+    <a class="" href="">My Tasks</a>
+  </li>
+  <li>
+    <span class=""><i class="fa fa-th-list"></i></span>
+    <a class="" href="">Online Test</a>
+  </li>
+  <li>
+    <span class=""><i class="fa fa-th-list"></i></span>
+    <a class="" href="">Online Test</a>
+  </li>
+  <li>
+    <span class=""><i class="fa fa-eye"></i></span>
+    <a href="" class="">Quiz Results</a>
+  </li>
+  <li>
+    <span class="pad-left-7"><i class="fa fa-calendar"></i></span>
+    <a class="" href="#">BookedEvents</a>
+  </li>
+  <li>
+    <span class=""><i class="fa fa-eye"></i></span>
+    <a class="" href="">Refer Friends</a>
+  </li>
+  <li>
+    <span class=""><i class="fa fa-eye"></i></span>
+    <a class="" href="">Visiblity Settings</a>
+  </li>
+</ul> -->

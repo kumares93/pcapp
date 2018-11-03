@@ -1,0 +1,64 @@
+<!-- <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+            <li *ngFor="let course of courses" class="nav-item">
+                <a class="nav-link" [routerLink]="['course/', course.title]">{{course.title}}</a>
+            </li>
+        </ul>
+    </div>
+</nav> -->
+
+
+<nav class="navbar navbar-expand-md navbar-dark fixed-top header-navbar">
+    <div class="container-fluid">
+      <!-- <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+      </div> -->
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav nav-start-elements">
+            <li *ngFor="let course of courses" class="nav-item">
+                <a class="nav-link" [routerLink]="['course/', course.name]">{{course.name}}</a>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav nav-header-elements">
+          <li><button class="nav-signUp"><a  href="#"> Sign Up</a></button></li>
+          <li class="nav-signIn"><a href="#">Login</a></li>
+        </ul>
+        <div class="cart-icon">
+          <a href="#">
+            <i class="fa fa-cart-arrow-down " style="font-size:30px;color:white"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+<div class="container-fluid header-below-nav">
+<div class="row">
+  <div class="col-sm-4">
+    <img class="img-logo" src="assets/images/pc-logo.png" alt="logo">
+    <h1 class="logo-head">PioneerCoders</h1>
+  </div>
+  <div class="col-sm-2"></div>
+  <div class="col-sm-6">
+    <ul class="right-nav">
+      <li><a href="#">Tutorials</a></li>
+      <li><a href="#">Courses</a></li>
+      <li><a href="#">Recruiter</a></li>
+      <li><a href="#">PO</a></li>
+      <li><a href="#">Jobs</a></li>
+      <li><a href="#">Events</a></li>
+      <li><a href="#">UI Components</a></li>
+    </ul>
+  </div>
+</div>
+</div>
+
+
+
+
+
+      
