@@ -20,11 +20,15 @@ import { CodeExecutorService } from './service/code-executor/code-executor.servi
 const appRoutesConfig: Routes = [
   {
       path: '',
-      redirectTo: 'course/Java/rVucuobUwko',
+      redirectTo: 'course/Node%20JS/1',
       pathMatch: 'full'
   },
   { path: 'course/:courseId', component: HomeComponent,
-      children: [
+      children: [ {
+        path: '',
+        redirectTo: '1',
+        pathMatch: 'full'
+    },
           {  path: ':topicId', component: YoutubePlayerComponent},
       ]
   },
@@ -46,4 +50,9 @@ const appRoutesConfig: Routes = [
   providers: [TutorilaService, CodeExecutorService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+  constructor(private courseService:TutorilaService){
+
+  }
+  
+}

@@ -12,25 +12,12 @@
         </youtube-player>
     </div>
     <div *ngFor="let course of courses" class="col-lg-10 col-md-10 col-sm-10 col-xs-10 p-0 m-0" >
-        <div *ngFor="let topics of 
-        course.topics; let i = index">
-            <div *ngIf="topics.name === topic">
-                <h1>{{topics.name}}:</h1>
-    <p>{{course.description}}</p>
 
-                <button class="btn btn-primary" href="http://www.github.com">download link</button>
+        <div *ngFor="let Ctopics of course.topics">
+
+            <div *ngIf="Ctopics.name === topic">
+                <h1>{{Ctopics.name}}</h1>
+                <button class="btn btn-primary"  ><a class="btn btn-primary" href="{{Ctopics.projectUrl}}">download link</a> </button>
             </div>
         </div>
     </div> 
-
-
-
-
-<!-- <youtube-player
-[videoId]="id"
-(ready)="savePlayer($event)"
-(change)="onStateChange($event)"
-></youtube-player>
-<div>
-    topic id::{{id}}
-</div> -->

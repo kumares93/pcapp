@@ -15,6 +15,7 @@ export class Topics {
         this.activeRoute.params.subscribe(params => {
             this.courseName = params.courseId || "Node JS";
             console.log('Topics', params);
+            this.courseService.TopicsObject=params;
             courseService.getAllTopics().pipe().subscribe(observable=>{this.courses=observable;});
         });
     }

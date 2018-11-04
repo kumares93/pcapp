@@ -17,6 +17,7 @@ export class TutorilaService {
     this.getAllTopics().pipe().subscribe(observable=>{this.course=observable;});
      
     }
+    TopicsObject;
  
     getAllTopics() {
         return  this.http.get<CourseModel[]>("http://localhost:4300/api/courses")

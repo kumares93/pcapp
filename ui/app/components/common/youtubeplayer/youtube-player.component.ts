@@ -1,9 +1,9 @@
 
 import { Component, OnInit, OnDestroy, OnChanges, Input } from '@angular/core';
-import { ActivatedRoute, Params, Router, NavigationEnd } from '@angular/router';
-import { Http } from '@angular/http';
-import { Topic, CourseModel } from "../../../modals/topic";
+import { ActivatedRoute, Params, Router, NavigationEnd, UrlSegment } from '@angular/router';
+import { CTopic, CourseModel } from "../../../modals/topic";
 import { TutorilaService } from "ui/app/service/tutorial/tutorialservice";
+import { Topics } from '../../tutorial/topics/topics.component';
 @Component({
   selector: 'play-youtube-video',
   templateUrl: './youtube-player.component.html',
@@ -12,48 +12,78 @@ import { TutorilaService } from "ui/app/service/tutorial/tutorialservice";
 export class YoutubePlayerComponent implements OnInit, OnDestroy, OnChanges {
     @Input()
     courses: CourseModel[];
+    VideoUrl:string;
+    vid: any;
+    public topic: string;
     player: YT.Player;
-    videoid: any;
+    public videoid: any;
     videoname: any;
     height: number;
     public ytEvent;
-    vid: any;
-    topic: any;
   constructor(private route: ActivatedRoute, private router: Router,private courseService:TutorilaService) {
     router.events.forEach((event) => {
       if(event instanceof NavigationEnd) {
-        this.route.queryParams.subscribe((queryparams: Params) => { const vid = queryparams['watch']; this.getvideo(vid); } );
+        this.courseService.getAllTopics().pipe().subscribe(observable=>{this.courses=observable;
+          this.route.url.subscribe((observer:UrlSegment[])=>{console.log("My video id "+Number(observer[0].path));this.getVideoId(Number(observer[0].path))});
+        });
+       
+        //this.route.queryParams.subscribe((queryparams: Params) => { const vid = queryparams['watch']; this.getvideo(vid); } );
         this.vid = !this.vid;
-        this.route.params.subscribe((params: Params) => this.topic = params['topics']);
-        this.videoid = this.route.snapshot.queryParams['watch']; 
-      
-      
+        //this.route.params.subscribe((params: Params) => this.topic = params['topics']);
+        //this.videoid = this.route.snapshot.queryParams['watch']; 
+        //console.log("this.videoid"+this.videoid);
       }
     });
    }
+   getVideoId=(id)=>{
+this.courses.forEach(element => {
+  if(this.courseService.TopicsObject.courseId==element.name){
+  element.topics.map((value:CTopic)=> {
+    if(value.topicId==id){
+      this.VideoUrl=value.videoURL;
+      this.videoid=value.videoId;
+      this.topic=value.name;
+      this.vid = !this.vid;
+    }
+  })}
+});
+   }
    getvideo(vid) {
      this.videoid = vid;
+     
    }
   ngOnInit() {
-    this.courseService.getAllTopics().pipe().subscribe(observable=>{this.courses=observable;});
-    this.route.params.subscribe((params: Params) => {this.videoname = params['topics']; });
-    this.route.queryParams.subscribe((queryparams: Params) => { this.videoid = queryparams['watch']; } );
-    console.log('videoid is :'+ this.videoid );
-    this.route.fragment.subscribe((fragment) => {this.vid = fragment; } );
-    // console.log('name of video  ' + this.videos.name );
+    this.courseService.getAllTopics().pipe().subscribe(observable=>{this.courses=observable;
+      this.route.url.subscribe((observer:UrlSegment[])=>{
+        console.log("My video id "+Number(observer[0].path));
+        this.getVideoId(Number(observer[0].path))});
+        
+    });
+    this.route.fragment.subscribe((fragment) => {this.vid = fragment; } );  
+    // this.route.params.subscribe((params: Params) => {this.videoname = params['topics']; });
+    // this.route.queryParams.subscribe((queryparams: Params) => { this.videoid = queryparams['watch']; } );
+    // console.log('videoid is :'+ this.videoid );
+    // // console.log('name of video  ' + this.videos.name );
   }
   ngOnChanges() {
-    this.route.params.subscribe((params: Params) => {this.videoname = params['topics']; });
-    this.route.queryParams.subscribe((queryparams: Params) => { this.videoid = queryparams['watch']; } );
-    console.log('videoid is :'+ this.videoid );
+    this.route.url.subscribe((observer:UrlSegment[])=>{
+      console.log("My video id "+Number(observer[0].path));
+      this.getVideoId(Number(observer[0].path))});
+        
+    // this.route.params.subscribe((params: Params) => {this.videoname = params['topics']; });
+    // this.route.queryParams.subscribe((queryparams: Params) => { this.videoid = queryparams['watch']; } );
+    // console.log('videoid is :'+ this.videoid );
   }
     ngOnDestroy() {
   }
   onStateChange(event) {
     this.ytEvent = event.data;
+    console.log(this.ytEvent);
+    
   }
   savePlayer(player) {
     this.player = player;
+    console.log(this.player);
   }
   playVideo() {
     this.player.playVideo();

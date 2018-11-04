@@ -18,6 +18,6 @@ export interface CTopic {
     name: string;
     videoURL: string;
     videoId: string;
-    editor: object;
+    editor: any;
     projectUrl:string;
 }

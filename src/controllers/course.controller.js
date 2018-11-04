@@ -1,116 +1,121 @@
 const Course = require('../models/course.model.js');
 
-// Create and Save a new Note
+// Create and Save a new Course.
 exports.create = (req, res) => {
     // Validate request
-    if(!req.body.content) {
+    if(!req.body.courseId && !req.body.name && !req.body.topics) {
         return res.status(400).send({
-            message: "Note content can not be empty"
+            message: "Course id, name and topics can not be empty."
         });
     }
 
-    // Create a Note
+    // Create a Course
     const course = new Course({
-        title: req.body.title || "Untitled Note", 
-        content: req.body.content
+        courseId: req.body.courseId,
+        courseName: req.body.name,
+        description: req.body.description,
+        topics: req.body.topics
     });
 
-    // Save Note in the database
+    // Save Course in the database
     course.save()
     .then(data => {
         res.send(data);
     }).catch(err => {
         res.status(500).send({
-            message: err.message || "Some error occurred while creating the Note."
+            message: err.message || "Some error occurred while creating the Course."
         });
     });
 };
 
-// Retrieve and return all notes from the database.
+// Retrieve and return all Courses from the database.
 exports.findAll = (req, res) => {
     Course.find()
     .then(courses => {
         res.send(courses);
     }).catch(err => {
         res.status(500).send({
-            message: err.message || "Some error occurred while retrieving notes."
+            message: err.message || "Some error occurred while retrieving Courses."
         });
     });
 };
 
-// Find a single note with a noteId
+// Find a single Course with a courseId
 exports.findOne = (req, res) => {
-    Course.findById(req.params.courseId)
+    Course.findOne({"courseId":req.params.courseId})
     .then(course => {
         if(!course) {
             return res.status(404).send({
-                message: "Note not found with id " + req.params.courseId
+                message: "Course not found with id " + req.params.courseId
             });            
         }
-        res.send(note);
+        res.send(course);
     }).catch(err => {
+        console.log(err);
         if(err.kind === 'ObjectId') {
             return res.status(404).send({
-                message: "Note not found with id " + req.params.courseId
+                message: "Course not found with id " + req.params.courseId
             });                
         }
         return res.status(500).send({
-            message: "Error retrieving note with id " + req.params.courseId
+            message: "Error retrieving Course with id " + req.params.courseId
         });
     });
 };
 
-// Update a note identified by the noteId in the request
+// Update a Course identified by the CourseId in the request
 exports.update = (req, res) => {
     // Validate Request
-    if(!req.body.content) {
+    if(!req.body.courseId && !req.body.name && !req.body.topics) {
         return res.status(400).send({
-            message: "Note content can not be empty"
+            message: "Course content can not be empty"
         });
     }
 
-    // Find note and update it with the request body
+    // Find Course and update it with the request body
     Course.findByIdAndUpdate(req.params.courseId, {
-        title: req.body.title || "Untitled Note",
-        content: req.body.content
+        courseId: req.body.courseId,
+        courseName: req.body.name,
+        description: req.body.description,
+        topics: req.body.topics
     }, {new: true})
     .then(course => {
         if(!course) {
             return res.status(404).send({
-                message: "Note not found with id " + req.params.courseId
+                message: "Course not found with id " + req.params.courseId
             });
         }
         res.send(course);
     }).catch(err => {
         if(err.kind === 'ObjectId') {
             return res.status(404).send({
-                message: "Note not found with id " + req.params.courseId
+                message: "Course not found with id " + req.params.courseId
             });                
         }
         return res.status(500).send({
-            message: "Error updating note with id " + req.params.courseId
+            message: "Error updating Course with id " + req.params.courseId
         });
     });
 };
 
-// Delete a note with the specified noteId in the request
+// Delete a course with the specified courseId in the request
 exports.delete = (req, res) => {
     Course.findByIdAndRemove(req.params.courseId)
     .then(course => {
         if(!course) {
             return res.status(404).send({
-                message: "Note not found with id " + req.params.courseId
+                message: "Course not found with id " + req.params.courseId
             });
         }
-        res.send({message: "Note deleted successfully!"});
+        res.send({message: "Course deleted successfully!"});
     }).catch(err => {
         if(err.kind === 'ObjectId' || err.name === 'NotFound') {
             return res.status(404).send({
-                message: "Note not found with id " + req.params.courseId
+                message: "Course not found with id " + req.params.courseId
             });                
         }
         return res.status(500).send({
-            message: "Could not delete note with id " + req.params.courseId
+            message: "Could not delete Course with id " + req.params.courseId
         });
     });
 };
