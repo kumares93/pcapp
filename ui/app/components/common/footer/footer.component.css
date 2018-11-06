@@ -21,8 +21,9 @@
 .footer-contactUs-head-text,
 .footer-instractor-head-text{
     margin-left: 10px;
-    position: absolute;
-    top: 70px;
+    width: 225px;
+    float: left;
+    margin-top: 13px;
     font-size: 20px;
 }
 .footer-aboutUs-head-icon,
@@ -32,6 +33,7 @@
     float: right;
     margin: 15px;
     color: black;
+    margin: 13px;
 }
 .footer-social-icons{
     list-style: none;
@@ -47,10 +49,11 @@
  padding: 0px;
  margin: 40px 5px;
 }
-.footer-social-icons li i{
-    margin: 15px;
+.footer-social-icons a{
+    margin: 10px 15px;
     color: white;
     font-size: 20px;
+    position: absolute;
 }
 .footer-aboutUs-content-text{
     margin: 50px 0px;
@@ -70,6 +73,7 @@
     margin-top: 25px;
     border: 2px solid #18BB7C;
     border-radius: 10px 0px;
+    color: white;
 }
 
 .page-foot{
@@ -81,4 +85,5 @@
     font-size: 16px;
     margin: 15px;
     color: white;
+    position: absolute;
 }

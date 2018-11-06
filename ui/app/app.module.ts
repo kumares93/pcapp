@@ -29,7 +29,7 @@ const appRoutesConfig: Routes = [
         redirectTo: '1',
         pathMatch: 'full'
     },
-          {  path: ':topicId', component: YoutubePlayerComponent},
+    {  path: ':topicId', component: YoutubePlayerComponent},
       ]
   },
 ];

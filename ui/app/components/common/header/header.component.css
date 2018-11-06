@@ -1,64 +1,66 @@
-.nav-start-elements{
-    margin-left: 70px;
-    }
-    .header-navbar{
-        background-color: #00304C;
-    }
-    nav-link{
-     color: white;
-     font-size: 16px;
-    }
-    .nav-start-elements li{
-        margin: 0px 13px;
-    }
-    .cart-icon{
-        margin-top: 7px;
-        margin-left: 150px;
-    }
-  
-    .nav-signUp{
-        width: 80px;
-        height: 35px;
-        margin-top: 7px;
-        border: 1px solid #0ba9a0;
-        border-radius: 4px;
-        background-color: #0ba9a0;
-        color: white;
-        position: relative;
-        margin-left: 600px;
-    }
-    .nav-signIn{
-        margin: 10px 0px 0px 10px;
-    }
-    .nav-header-elements a{
-        text-decoration: none;
-        color: white;
-        font-size: 18px;
-    }
-    .header-below-nav{
-        margin-top: 75px;
-    }
-    .img-logo{
-        width: 70px;
-        margin-left: 80px;
-    }
-    .logo-head{
-        float: right;
-    }
-    .right-nav{
-        list-style: none;
-        display: flex;
-        justify-content: space-evenly;
-    }
-    .right-nav li a{
-        text-decoration: none;
-        color: rgb(149, 146, 146);
-        font-size: 20px;
-    }
-    /* .under-construction{
-        height: 300px;
-       
-    } */
-    
+.header-top{
+    background-color: #00304C;
+    background-image: linear-gradient(-90deg, rgb(20, 99, 144), #00304C);
+    color: white;
+    height: 65px;
+}
+.header-navbar{
+    background-color: rgb(1, 66, 103);
+    background-image: linear-gradient(90deg, rgb(20, 99, 144), #00304C);
+    margin-top: 65px;
+    width: 100%;
+    height: 40px;
+    z-index: 1000;
+}
 
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255,255,255);
+    font-size: 18px;
+}
+.nav-start-elements li{
+    margin: 0px 13px;
+    font-size: 18px;
+}
+
+
+.nav-signUp{
+    width: 80px;
+    height: 35px;
+    margin-top: 7px;
+    border: 1px solid #0ba9a0;
+    border-radius: 4px;
+    background-color: #0ba9a0;
+    color: white;
+   
+}
+.nav-signIn{
+    margin: 10px 0px 0px 10px;
+}
+.nav-header-elements{
+    display: flex;
+    list-style: none;
+    margin-top: 10px;
+}
+.nav-header-elements a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+.img-logo{
+    float: left;
+    width: 70px;
+    margin: 3px;
+}
+.logo-head{
+    float: left;
+    font-size: 2.3rem;
+    margin: 10px;
+}
+
+/* .under-construction{
+    height: 300px;
     
+} */
+
+

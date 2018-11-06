@@ -1,41 +1,27 @@
-.student-main-container{
-    background-color: white;
-    width: 20%;
-    margin: 0% 7%;
-    box-sizing: border-box;
-}
-.student-profile{
-    box-sizing: border-box;
-}
-.student-profile div:first-child{
-    border: 2px solid gainsboro;
+
+.topics-left-nav{
     padding: 0%;
 }
-.student-main{
-    
-    background-repeat: repeat;
-    background-color: #00304C;
-}
-.student-profile-image{
-    width: 120px; 
-    margin: 30px 90px;
-}
-.student-left-nav{
-    padding: 0%;
-}
-.student-profile h1{
-    margin: 20px 90px 40px;
-}
-.student-left-nav-list{
+
+.topics-left-nav-list{
     list-style: none;
     padding: 0px;
 }
-.student-left-nav-list li{
-    border: 2px solid gainsboro;
-    padding: 1rem 1.7rem;
+.topics-left-nav-list-box{
+    top: 106px;
 }
-.student-left-nav-list li a{
+.topics-left-nav-list li{
+    border: 1px solid #00304C;
+    border-radius: 0px 5px 5px 0px;
+    height: 40px;
+    width: 266px;
+    margin-left: 15px;
+}
+.topics-left-nav-list li a{
    text-decoration: none;
-   color: rgb(202, 199, 199);
+   color: #0a5480;
    font-size: 18px;
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255,255,255);
 }
