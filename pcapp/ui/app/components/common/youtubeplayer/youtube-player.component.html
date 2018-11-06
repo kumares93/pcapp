@@ -1,0 +1,32 @@
+<div class="container">
+<div class="row p-0">
+  <div class="col-md-12 p-0">
+    <section class="col-md-7 p-0 float-left topic-video">
+        <div *ngIf="vid" class="vid">
+            <youtube-player   width="100%"
+            height="400px" [videoId]="videoid" (ready)="savePlayer($event)" (change)="onStateChange($event)" height="100%"
+                width="100%">
+            </youtube-player>
+        </div>
+        <div *ngIf="!vid" class="vid">
+            <youtube-player   width="100%"
+            height="400px" [videoId]="videoid" (ready)="savePlayer($event)" (change)="onStateChange($event)" height="100%"
+                width="100%">
+            </youtube-player>
+        </div>
+    </section>
+    <section class="col-md-4  float-left topic-description">
+        <div *ngFor="let course of courses" class="" >
+
+            <div *ngFor="let Ctopics of course.topics">
+
+                <div *ngIf="Ctopics.name === topic">
+                    <h1>{{Ctopics.name}}</h1>
+                    <button class="btn btn-primary link-button"  ><a href="{{Ctopics.projectUrl}}">download link</a> </button>
+                </div>
+            </div>
+        </div> 
+    </section>
+  </div>
+</div>
+</div>

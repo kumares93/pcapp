@@ -1,0 +1,20 @@
+
+
+.vid {
+    width: 100%;
+    height: 400px;;
+}
+.link-button{
+    width: 180px;
+    height: 35px;
+    margin-top: 7px;
+    border: 1px solid #0ba9a0;
+    border-radius: 4px;
+    background-color: #0ba9a0;
+    color: white;
+}
+.link-button a{
+    color: white;
+    text-decoration: none;
+
+}

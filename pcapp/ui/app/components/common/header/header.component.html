@@ -1,0 +1,31 @@
+
+<div class="container-fluid fixed-top ">
+<div class="row header-top">
+<div class="col-md-4 ">
+  <img class="img-logo" src="assets/images/pc-logo.png" alt="logo">
+  <h1 class="logo-head">PioneerCoders</h1>
+</div>
+<div class="col-md-2 offset-md-6">
+<ul class="nav-header-elements">
+    <li><button class="nav-signUp"><a  href="#"> Sign Up</a></button></li>
+    <li class="nav-signIn"><a href="#">Login</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+<nav class="navbar navbar-expand-md navbar-dark position-fixed  header-navbar">
+    <div class="container-fluid">
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav nav-start-elements">
+            <li *ngFor="let course of courses" class="nav-item">
+                <a class="nav-link" [routerLink]="['course/', course.name]">{{course.name}}</a>
+            </li>
+        </ul>
+       
+      </div>
+    </div>
+  </nav>
+
+
+    

@@ -1,0 +1,27 @@
+
+.topics-left-nav{
+    padding: 0%;
+}
+
+.topics-left-nav-list{
+    list-style: none;
+    padding: 0px;
+}
+.topics-left-nav-list-box{
+    top: 106px;
+}
+.topics-left-nav-list li{
+    border: 1px solid #00304C;
+    border-radius: 0px 5px 5px 0px;
+    height: 40px;
+    width: 266px;
+    margin-left: 15px;
+}
+.topics-left-nav-list li a{
+   text-decoration: none;
+   color: #0a5480;
+   font-size: 18px;
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255,255,255);
+}

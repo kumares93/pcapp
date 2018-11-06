@@ -1,0 +1,89 @@
+.page-footer{
+    margin-top: 40px;
+    background-color: #292929;
+    color: white;
+}
+.footer-aboutUs-head,
+.footer-contactUs-head,
+.footer-instractor-head{
+    margin-top: 55px;
+    height: 60px;
+    background-color: #F27C66;
+    border-radius: 20px 0px;
+}
+.footer-contactUs-head{
+    background-color: #18BB7C;
+}
+.footer-instractor-head{
+    background-color: #0ba9a0;
+}
+.footer-aboutUs-head-text,
+.footer-contactUs-head-text,
+.footer-instractor-head-text{
+    margin-left: 10px;
+    width: 225px;
+    float: left;
+    margin-top: 13px;
+    font-size: 20px;
+}
+.footer-aboutUs-head-icon,
+.footer-contactUs-head-icon,
+.footer-instractor-head-icon{
+    font-size: 30px;
+    float: right;
+    margin: 15px;
+    color: black;
+    margin: 13px;
+}
+.footer-social-icons{
+    list-style: none;
+    display: flex;
+    padding: 0px;
+}
+.footer-social-icons li{
+ width: 50px;
+ height: 50px;
+ border: 2px solid #F27C66;
+ margin: 5px;
+ border-radius: 15px 0px;
+ padding: 0px;
+ margin: 40px 5px;
+}
+.footer-social-icons a{
+    margin: 10px 15px;
+    color: white;
+    font-size: 20px;
+    position: absolute;
+}
+.footer-aboutUs-content-text{
+    margin: 50px 0px;
+    font-size: 16px;
+}
+.footer-contactUs-form input,
+.footer-contactUs-form textarea{
+    background-color: transparent;
+    margin-top: 25px;
+    border: 1px solid #dcdcdc5c;
+}
+.footer-submit-button{
+    float: right;
+    height: 40px;
+    width: 90px;
+    background-color: transparent;
+    margin-top: 25px;
+    border: 2px solid #18BB7C;
+    border-radius: 10px 0px;
+    color: white;
+}
+
+.page-foot{
+    background-color: black;
+    height: 50px;
+  
+}
+.footer-text{
+    font-size: 16px;
+    margin: 15px;
+    color: white;
+    position: absolute;
+}
