@@ -21,42 +21,37 @@
 } */
 
 
-.nav-start-elements{
-    margin-left: 70px;
-    }
+
     .header-navbar{
-        background-color: #00304C;
         width: 100%;
         height: 50px;
         margin-top: 20px;
+        background-color: #00304C;
+        margin-left: 0px;
     }
     .nav-header{
      color: white;
-    }
-    .nav-start-elements li{
-        margin: 0px 13px;
+     margin: 5px;
     }
     .nav-lang-select{
-        width: 100%;
         height: 30px;
-        margin: 5px;
+        margin: 10px 0px;
         border: 1px solid #00304C;
         border-radius: 4px;
     }
     .nav-submit{
     width: 75px;
     height: 30px;
-    margin-top: 5px;
+    margin-top: 10px;
     border: 1px solid #0ba9a0;
     border-radius: 4px;
     background-color: #0ba9a0;
     color: white;
-    position: relative;
-    margin-left: 10px;
+
+   
+    
     }
-    .nav-editer-elements{
-        margin-left: 380px;
-    }
+  
     .result-box{
         border: 1px solid;
         height: 150px;
