@@ -1,0 +1,83 @@
+.total-model{
+    background-color: #82868a
+}
+.mat-dialog-content {
+    display: block;
+    margin: 0 -24px;
+    width: 670px;
+    max-height: 85vh;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    z-index: 1050;
+    background-color: #fff;
+}
+
+.signp-layout {
+    -webkit-box-shadow: 0 0 5px 2px rgba(117, 112, 112, 0.452);
+    box-shadow: 0 0 5px 2px rgba(117, 112, 112, 0.452);    
+    margin: 10px;
+}
+.signp-header{
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+.signp-header button{
+    width: 80px;
+    height: 35px;
+    margin-top: 7px;
+    border: 1px solid #eb5424;
+    border-radius: 4px;
+    background-color: #eb5424;
+    color: white;
+   
+}
+.form-group {
+    margin: 30px 0px;
+}
+.form-control{
+    height: 45px;
+}
+.signUp-text{
+    text-align: center;
+}
+.btn-submit{
+    color: #fff;
+    background-color: #eb5424;
+    border-color: #e14615;
+}
+.signup-separate{
+    border-style: solid;
+    border-width: 1px 0px 0px 0px; 
+    margin: 35px 85px;
+    background-color: #82868a;
+    border-color: #8d9197;
+}
+.signup-separate p{
+    position: absolute;
+    margin: -15px 150px;
+    background-color: white;
+    width: 35px;
+    text-align: center;
+}
+.but-social-group{
+    margin: 30px 0px;
+    padding: 20px;
+}
+
+.social-but-icon{
+    width: 25px;
+    height: 45px;
+    float: left;
+    margin-left: 10px;
+}
+.social-but{
+    padding: 2px;
+}
+
+.social-but p{
+    margin-top: 8px;
+    position: absolute;
+    left: 120px;
+}

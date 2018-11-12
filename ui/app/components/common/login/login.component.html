@@ -1,0 +1,47 @@
+<div class="total-model">
+
+  <div class="signp-header"><h2 mat-dialog-title>Login</h2><button mat-button mat-dialog-close>X</button></div>
+  <mat-dialog-content class="mat-typography">
+      <div class="container">
+        <div class="row">
+  
+          <div class="col-md-12 signp-layout"> 
+            <!-- <h2 class="signp-header" >Sign Up</h2> -->
+           
+            <div class="col-md-12">
+              <label>{{Message}}</label>
+              <form action="" (submit)="onSubmit($event)">
+                  <div mat-dialog-content class="material-custom">
+                      <p>Enter your Username</p>
+                      <mat-form-field>
+                        <input matInput type="email" class="form-control" id="email" placeholder="Enter email" name="email" >
+                      </mat-form-field>
+                    </div>
+                    <div mat-dialog-content class="material-custom">
+                        <p>Enter your Passowrd</p>
+                        <mat-form-field>
+                          <input matInput type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" >
+                        </mat-form-field>
+                      </div>
+               
+                <button type="submit" mat-raised-button cdkFocusInitial class="btn btn-lg btn-block btn-submit" >Login</button>
+              </form>
+              <button (click)="onNoClick()"  mat-button >No Thanks</button>
+              
+            
+            </div>
+
+<!-- <mat-dialog-content>
+<h1 mat-dialog-title>Login here</h1>
+<div mat-dialog-content>
+  <p>Enter your Username</p>
+  <mat-form-field>
+    <input matInput >
+  </mat-form-field>
+</div>
+
+<div mat-dialog-actions>
+  <button (click)="onNoClick()"  mat-button >No Thanks</button>
+  <button  mat-button   cdkFocusInitial>Ok</button>
+</div>
+</mat-dialog-content> -->

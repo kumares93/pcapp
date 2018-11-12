@@ -3,7 +3,7 @@
 		"courseId": 1, "name": "JavaScript", "description": "javascript",
 		"topics": [
 			{
-				"topicId": 1, "name": "Introduction to JS", "videoId": "N0lxfilGfak", "videoURL": "",
+				"topicId": 1, "name": "Introduction to JS", "videoId": "N0lxfilGfak", "videoURL": "https://www.youtube.com/watch?v=_8A5UMH_rqU",
 				"editor": {"id": 1, "code": "console.log('hi')"},
 				"projectUrl":"http://www.github.com"
 			},

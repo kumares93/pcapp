@@ -1,0 +1,70 @@
+<div class="total-model">
+
+<div class="signp-header"><h2 mat-dialog-title>Sign Up</h2><button mat-button mat-dialog-close>X</button></div>
+<mat-dialog-content class="mat-typography">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-12 signp-layout"> 
+          <!-- <h2 class="signp-header" >Sign Up</h2> -->
+         
+          <div class="col-md-12">
+            
+            <form action="" (submit)="onSubmit($event)">
+              <div class="form-group">
+                <label for="userName">User name:</label>
+                <input type="text" class="form-control" id="userName" placeholder="User name" name="userName">
+              </div>
+              <div class="form-group">
+                <label for="pwd">Password:</label>
+                <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+              </div>
+              <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+              </div>
+              <div class="form-group">
+                <label for="PhoneNumber">Phone Number:</label>
+                <input type="number" class="form-control" id="PhoneNumber" placeholder="Phone Number" name="PhoneNumber">
+              </div>
+              <div class="signUp-text">
+                <p>By clicking any of the Sign Up buttons,<br/>
+                  I agree to the <a href="">terms of service</a></p>
+              </div>
+              <button type="submit" class="btn btn-lg btn-block btn-submit">Submit</button>
+            </form>
+          
+          </div>
+
+          <!-- <div class="col-md-8 offset-md-2 signup-separate"><p>or</p></div>
+          <div class="but-social-group">
+            <button class='btn btn-dark btn-lg btn-block social-but'>
+              <i class="fab fa-github social-but-icon"></i>
+              <p>Sign up with Github</p>
+            </button>
+            <button class='btn btn-primary btn-lg btn-block social-but'>
+              <i class="fab fa-google social-but-icon"></i> <p>Sign up with Google </p>
+            </button>
+            <button class='btn btn-primary btn-lg btn-block social-but'>
+              <i class="fab fa-microsoft social-but-icon"></i> <p>Sign up with Microsoft</p>
+            </button>
+          </div> -->
+      
+        </div>
+      
+  
+      </div>
+    </div>
+  </mat-dialog-content>
+</div>
+    <!-- <h1 mat-dialog-title>Hi {{data.name}}</h1>
+    <div mat-dialog-content>
+      <p>What's your favorite animal?</p>
+ 
+        <input matInput [(ngModel)]="data.animal">
+      
+    </div>
+    <div mat-dialog-actions>
+      <button mat-button (click)="onNoClick()">No Thanks</button>
+      <button mat-button [mat-dialog-close]="data.animal" cdkFocusInitial>Ok</button>
+    </div> -->

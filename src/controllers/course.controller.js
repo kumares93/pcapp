@@ -12,7 +12,7 @@ exports.create = (req, res) => {
     // Create a Course
     const course = new Course({
         courseId: req.body.courseId,
-        courseName: req.body.name,
+        name: req.body.name,
         description: req.body.description,
         topics: req.body.topics
     });

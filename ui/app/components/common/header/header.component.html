@@ -6,10 +6,17 @@
       <h1 class="logo-head">PioneerCoders</h1>
     </div>
     <div class="col-md-2 offset-md-6">
-      <ul class="nav-header-elements">
-        <li><button class="nav-signUp"><a  href="#"> Sign Up</a></button></li>
-        <li class="nav-signIn"><a href="#">Login</a></li>
+      <ul *ngIf="!this.UserSignupService.LoginStatus; else loggedIn"  class="nav-header-elements">
+        <li ><button class="nav-signUp" mat-raised-button (click)="openDialog()">Sign Up</button></li>
+        <li class="nav-signIn" mat-raised-button (click)="openLoginDialog()"> Login </li>
+        
       </ul>
+      <ng-template #loggedIn >
+        <ul class="nav-header-elements">
+          <li> <button class="nav-signUp" mat-raised-button >  {{ this.UserSignupService.LoginData.username}}</button> </li>
+          <li class="nav-signIn" mat-raised-button (click)="logOut()"> Logout </li>
+          </ul>
+        </ng-template> 
     </div>
   </div>
 </div>
@@ -28,3 +35,16 @@
 
 
     
+     <!-- <ol>
+      <li>
+        
+          <input matInput [(ngModel)]="name" placeholder="What's your name?">
+      
+      </li>
+      <li>
+        <button mat-raised-button (click)="openDialog()">Pick one</button>
+      </li>
+      <li *ngIf="animal">
+        You chose: <i>{{animal}}</i>
+      </li>
+    </ol> -->
